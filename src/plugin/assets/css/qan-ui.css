@@ -10,6 +10,15 @@
     50% { -webkit-transform: translateY(-2px);}
     100% { -webkit-transform: translateY(0px);}
 }
+@keyframes rotating/* 旋转动画 */
+{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(1turn);
+    }
+}
 /* ------------------超链接------------------ */
 body a{
     text-decoration: none;
@@ -76,6 +85,8 @@ body a:hover{
     border: none;
     background-color: #dadada;
     color: #000000;
+    display: flex;
+    align-items: center;
 }
 
 .qan-btn:hover{
@@ -118,10 +129,56 @@ body a:hover{
     color: #ffffff;
 }
 
-.qan-btn-size-default{
+.qan-btn-type-pink{
+    background-color: #fcc;
+    color: #ffffff;
+}
 
+.qan-btn-type-pink:hover{
+    background-color: rgb(255, 214, 214);
+    color: #ffffff;
+}
+
+.qan-btn-type-pink:active{
+    background-color: rgb(255, 177, 177);
+    color: #ffffff;
+}
+.qan-btn-size-default{
+    font-size: 14px;
+    padding: 10px 18px;
+}
+.qan-btn-size-medium{
+    font-size: 13px;
+    padding: 9px 17px;
+}
+
+.qan-btn-size-small{
+    font-size: 12px;
+    padding: 8px 16px;
 }
 
 .qan-btn-round{
     border-radius: 20px;
+}
+.qan-btn-disabled{
+    position: relative;
+    pointer-events: none;
+}
+.qan-btn-disabled::before{
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    right: -1px;
+    bottom: -1px;
+    border-radius: inherit;
+    background-color: hsla(0,0%,100%,.35);
+}
+/* ------------------加载------------------ */
+.icon-loading{
+    animation: rotating 2s linear infinite;
+    line-height: 1;
+    height: 100%;
+    margin-right: 10px;
 }
