@@ -1,5 +1,15 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <QANbutton @click="test" round>666</QANbutton>
   </div>
 </template>
+
+<script>
+export default {
+  methods:{
+    test(){
+      alert(1)
+    }
+  }
+}
+</script>
