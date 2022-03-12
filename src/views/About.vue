@@ -1,13 +1,24 @@
 <template>
   <div class="about">
-    <QANbutton loading type="blue" size="small" @click="test" round>测试按钮</QANbutton>
+    <QANmenu> 
+      <li>按钮</li>
+      <li>导航</li>
+      <li><QANbutton>111</QANbutton></li>
+    </QANmenu>
   </div>
 </template>
 
 <script>
 export default {
+  data(){
+    return{
+      loading:false,
+    }
+  },
   methods: {
-    test() {},
+    test() {
+      this.loading = !this.loading
+    },
   },
 };
 </script>
