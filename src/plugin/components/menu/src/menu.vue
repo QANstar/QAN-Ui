@@ -1,8 +1,8 @@
 <template>
-  <div :class="'qan-nav-' + type">
+  <div :class="['qan-nav-' + type, 'qan-nav-theme-' + theme]">
     <div class="qan-nav-content">
       <ul class="qan-nav-list">
-          <slot></slot>
+        <slot></slot>
       </ul>
     </div>
   </div>
@@ -24,6 +24,16 @@ export default {
       type: String,
       default: "default",
     },
+  },
+  provide() {
+    return {
+      rootMenu: this,
+    };
+  },
+  data() {
+    return {
+      activeIndex: this.defaultActive,
+    };
   },
 };
 </script>

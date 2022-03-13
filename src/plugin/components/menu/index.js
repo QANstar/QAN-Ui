@@ -1,8 +1,11 @@
 import QANmenu from './src/menu';
-
-/* istanbul ignore next */
-QANmenu.install = function(Vue) {
+import QANmenuItem from './src/menu-item.vue'
+let QAN_Menu = {}
+QAN_Menu.install = function (Vue) {
   Vue.component(QANmenu.name, QANmenu);
-};
+  Vue.component(QANmenuItem.name, QANmenuItem);
 
-export default QANmenu;
+
+}
+
+export default QAN_Menu;

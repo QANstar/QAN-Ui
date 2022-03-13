@@ -1,9 +1,9 @@
 <template>
   <div class="about">
-    <QANmenu> 
-      <li>按钮</li>
-      <li>导航</li>
-      <li><QANbutton>111</QANbutton></li>
+    <QANmenu defaultActive="1"> 
+      <QANmenuItem index="1">按钮</QANmenuItem>
+      <QANmenuItem index="2">导航</QANmenuItem>
+      <QANmenuItem index="3">模态框</QANmenuItem>
     </QANmenu>
   </div>
 </template>
