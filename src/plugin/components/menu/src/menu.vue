@@ -14,7 +14,7 @@ export default {
   props: {
     type: {
       type: String,
-      default: "top",
+      default: "horizontal",
     },
     defaultActive: {
       type: String,

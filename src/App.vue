@@ -1,13 +1,17 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <LeftNav/>
+    <div class="content">sadasd</div>
   </div>
 </template>
-
+<script>
+import LeftNav from "./components/LeftNav.vue"
+export default {
+  components:{
+    LeftNav
+  }
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -28,5 +32,8 @@
 
 #nav a.router-link-exact-active {
   color: #42b983;
+}
+.content{
+  padding-left: 150px;
 }
 </style>

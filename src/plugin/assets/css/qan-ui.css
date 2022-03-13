@@ -55,35 +55,55 @@ body a:hover{
 }
 
 .qan-nav-list{
-    display: flex;
-    align-items: center;
     height: 100%;
 }
 
 .qan-nav-list li{
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 0px 20px;
     border-radius: 5px;
-    height: 90%;
+    height: 45px;
     cursor: pointer;
 }
+/* 左侧 */
+
+.qan-nav-vertical{
+    width: 150px;
+    z-index: 100;
+}
+.qan-nav-vertical .qan-nav-list{
+    padding: 0;
+}
 /* 顶部 */
-.qan-nav-top{
+.qan-nav-horizontal{
     height: 55px;
     width: 100%;
     z-index: 100;
 }
 
-.qan-nav-top .qan-nav-content{
+.qan-nav-horizontal .qan-nav-content{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
+.qan-nav-horizontal .qan-nav-list{
+    display: flex;
+    align-items: center;
+}
 /* 默认主题 */
 .qan-nav-theme-default{
     background-color: #FFFFFF;
-    box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+}
+
+.qan-nav-theme-default.qan-nav-vertical{
+    border-right: 1px solid #ebebeb;
+}
+
+.qan-nav-theme-default.qan-nav-horizontal{
+    border-bottom: 1px solid #ebebeb;
 }
 
 .qan-nav-theme-default li{
@@ -92,10 +112,28 @@ body a:hover{
 }
 
 .qan-nav-theme-default li:hover{
-    background-color: #ebebeb;
+    color: #00AEEC;
 }
 
 .qan-nav-theme-default .qan-nav-active{
+    color: #00AEEC;
+}
+/* 块状主题 */
+.qan-nav-theme-shadow{
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
+}
+
+.qan-nav-theme-shadow li{
+    color: #000000;
+    font-weight: bold;
+}
+
+.qan-nav-theme-shadow li:hover{
+    background-color: #ebebeb;
+}
+
+.qan-nav-theme-shadow .qan-nav-active{
     color: #00AEEC;
 }
 
@@ -195,7 +233,7 @@ body a:hover{
     content: "";
     position: absolute;
     left: -1px;
-    top: -1px;
+    horizontal: -1px;
     right: -1px;
     bottom: -1px;
     border-radius: inherit;
