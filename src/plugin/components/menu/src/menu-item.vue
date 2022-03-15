@@ -5,9 +5,11 @@
 </template>
 
 <script>
+import Tools from '../../../assets/js/tool.js'
 export default {
     name:'QANmenuItem',
     inject: ['rootMenu'],
+    mixins: [Tools],
     props:{
         index:{
             default:null,
@@ -20,7 +22,8 @@ export default {
     },
     methods:{
         handleClick() {
-          this.rootMenu.activeIndex = this.index;
+          this.dispatch('QANmenu', 'item-click', this);
+        //   this.rootMenu.activeIndex = this.index;
           this.$emit('click', this);
       }
     }

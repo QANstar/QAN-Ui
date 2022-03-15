@@ -1,23 +1,13 @@
 <template>
   <div id="app">
-    <LeftNav/>
-    <div class="content">sadasd</div>
+    <router-view/>
   </div>
 </template>
-<script>
-import LeftNav from "./components/LeftNav.vue"
-export default {
-  components:{
-    LeftNav
-  }
-}
-</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
 }
 
@@ -32,8 +22,5 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #42b983;
-}
-.content{
-  padding-left: 150px;
 }
 </style>

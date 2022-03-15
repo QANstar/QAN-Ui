@@ -35,5 +35,20 @@ export default {
       activeIndex: this.defaultActive,
     };
   },
+  methods:{
+    handleItemClick(item) {
+        const { index } = item;
+        const hasIndex = item.index !== null;
+
+        if (hasIndex) {
+          this.activeIndex = item.index;
+        }
+
+        this.$emit('select', index, item);
+      },
+  },
+  mounted(){
+    this.$on('item-click', this.handleItemClick);
+  }
 };
 </script>
