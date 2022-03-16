@@ -2,6 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import ComponentView from '../views/ComponentView.vue'
 import Button from '../components/button.vue'
+import Nav from '../components/nav.vue'
+import Card from '../components/card.vue'
 
 Vue.use(VueRouter)
 
@@ -18,6 +20,14 @@ const routes = [
       {
         path: '/component/button',
         component: Button,
+      },
+      {
+        path: '/component/nav',
+        component: Nav,
+      },
+      {
+        path: '/component/card',
+        component: Card,
       }
     ]
   }

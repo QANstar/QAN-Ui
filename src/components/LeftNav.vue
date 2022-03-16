@@ -7,13 +7,14 @@
           font-size: 20px;
           font-weight: bold;
           color: #00aeec;
+          text-align: center;
         "
       >
         QANui
       </div>
       <QANmenuItem index="/component/button">按钮</QANmenuItem>
       <QANmenuItem index="/component/nav">导航</QANmenuItem>
-      <QANmenuItem index="/component/modal">模态框</QANmenuItem>
+      <QANmenuItem index="/component/card">卡片</QANmenuItem>
     </QANmenu>
   </div>
 </template>

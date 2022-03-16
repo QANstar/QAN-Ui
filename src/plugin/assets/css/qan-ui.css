@@ -1,31 +1,49 @@
 /* ------------------动画------------------ */
-*{
+* {
     transition: 0.1s;
 }
 
-@-webkit-keyframes shakeAnmi /* 上下抖动动画 */
-{
-    0% { -webkit-transform: translateY(-2px);}
-    25% { -webkit-transform: translateY(-5px);}
-    50% { -webkit-transform: translateY(-2px);}
-    100% { -webkit-transform: translateY(0px);}
+@-webkit-keyframes shakeAnmi
+
+/* 上下抖动动画 */
+    {
+    0% {
+        -webkit-transform: translateY(-2px);
+    }
+
+    25% {
+        -webkit-transform: translateY(-5px);
+    }
+
+    50% {
+        -webkit-transform: translateY(-2px);
+    }
+
+    100% {
+        -webkit-transform: translateY(0px);
+    }
 }
-@keyframes rotating/* 旋转动画 */
-{
+
+@keyframes rotating
+
+/* 旋转动画 */
+    {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(1turn);
     }
 }
+
 /* ------------------超链接------------------ */
-body a{
+body a {
     text-decoration: none;
     color: #000000;
 }
 
-body a:hover{
+body a:hover {
     color: #00AEEC;
 }
 
@@ -34,31 +52,33 @@ body a:hover{
     width: 10px;
     height: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
     background-color: #b4c7d0;
     border: 3px solid transparent;
     background-clip: padding-box;
     border-radius: 5px;
 }
+
 ::-webkit-scrollbar-track-piece {
     background: 0 0;
 }
 
 /* ------------------导航栏------------------ */
-.qan-nav-content{
+.qan-nav-content {
     height: 100%;
     width: 100%;
 }
 
-.qan-nav-content ul{
+.qan-nav-content ul {
     list-style-type: none;
 }
 
-.qan-nav-list{
+.qan-nav-list {
     height: 100%;
 }
 
-.qan-nav-list li{
+.qan-nav-list li {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -67,168 +87,182 @@ body a:hover{
     height: 45px;
     cursor: pointer;
 }
+
 /* 左侧 */
 
-.qan-nav-vertical{
+.qan-nav-vertical {
     width: 150px;
     z-index: 100;
 }
-.qan-nav-vertical .qan-nav-list{
+
+.qan-nav-vertical .qan-nav-list {
     padding: 0;
 }
+
 /* 顶部 */
-.qan-nav-horizontal{
+.qan-nav-horizontal {
     height: 55px;
     width: 100%;
     z-index: 100;
 }
 
-.qan-nav-horizontal .qan-nav-content{
+.qan-nav-horizontal .qan-nav-content {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.qan-nav-horizontal .qan-nav-list{
+.qan-nav-horizontal .qan-nav-list {
     display: flex;
     align-items: center;
 }
+
 /* 默认主题 */
-.qan-nav-theme-default{
+.qan-nav-theme-default {
     background-color: #FFFFFF;
 }
 
-.qan-nav-theme-default.qan-nav-vertical{
+.qan-nav-theme-default.qan-nav-vertical {
     border-right: 1px solid #ebebeb;
 }
 
-.qan-nav-theme-default.qan-nav-horizontal{
+.qan-nav-theme-default.qan-nav-horizontal {
     border-bottom: 1px solid #ebebeb;
 }
 
-.qan-nav-theme-default li{
+.qan-nav-theme-default li {
     color: #000000;
     font-weight: bold;
 }
 
-.qan-nav-theme-default li:hover{
+.qan-nav-theme-default li:hover {
     color: #00AEEC;
 }
 
-.qan-nav-theme-default .qan-nav-active{
+.qan-nav-theme-default .qan-nav-active {
     color: #00AEEC;
 }
+
 /* 块状主题 */
-.qan-nav-theme-shadow{
+.qan-nav-theme-shadow {
     background-color: #FFFFFF;
     box-shadow: 0 2px 4px rgb(0 0 0 / 8%);
 }
 
-.qan-nav-theme-shadow li{
+.qan-nav-theme-shadow li {
     color: #000000;
     font-weight: bold;
 }
 
-.qan-nav-theme-shadow li:hover{
+.qan-nav-theme-shadow li:hover {
     background-color: #ebebeb;
 }
 
-.qan-nav-theme-shadow .qan-nav-active{
+.qan-nav-theme-shadow .qan-nav-active {
     color: #00AEEC;
 }
 
 
 /* ------------------按钮------------------ */
-.qan-btn{
+.qan-btn {
     cursor: pointer;
     font-weight: 500;
     border-radius: 5px;
     padding: 10px 18px;
     border: none;
-    background-color: #dadada;
-    color: #000000;
+    background-color: #c5c5c5;
+    color: #ffffff;
     display: flex;
     align-items: center;
 }
 
-.qan-btn:hover{
-    background-color: #a9aaac;
-    color: #ffffff;
-}
-
-.qan-btn:active{
-    background-color: #7f7f80;
-    color: #ffffff;
-}
-/* 默认主题 */
-.qan-btn-type-default{
+.qan-btn:hover {
     background-color: #dadada;
-    color: #000000;
+    color: #ffffff;
 }
 
-.qan-btn-type-default:hover{
+.qan-btn:active {
+    background-color: #7f7f80;
+    color: #ffffff;
+}
+
+/* 默认主题 */
+.qan-btn-type-default {
+    background-color: #c5c5c5;
+    color: #ffffff;
+}
+
+.qan-btn-type-default:hover {
     background-color: #a9aaac;
     color: #ffffff;
 }
 
-.qan-btn-type-default:active{
+.qan-btn-type-default:active {
     background-color: #7f7f80;
     color: #ffffff;
 }
+
 /* 蓝色主题 */
-.qan-btn-type-blue{
+.qan-btn-type-blue {
     background-color: #24bbee;
     color: #ffffff;
 }
 
-.qan-btn-type-blue:hover{
+.qan-btn-type-blue:hover {
     background-color: #54d0fa;
     color: #ffffff;
 }
 
-.qan-btn-type-blue:active{
+.qan-btn-type-blue:active {
     background-color: #0da5d8;
     color: #ffffff;
 }
+
 /* 粉色主题 */
-.qan-btn-type-pink{
+.qan-btn-type-pink {
     background-color: #fcc;
     color: #ffffff;
 }
 
-.qan-btn-type-pink:hover{
+.qan-btn-type-pink:hover {
     background-color: rgb(255, 214, 214);
     color: #ffffff;
 }
 
-.qan-btn-type-pink:active{
+.qan-btn-type-pink:active {
     background-color: rgb(255, 177, 177);
     color: #ffffff;
 }
+
 /* 尺寸 */
-.qan-btn-size-default{
+.qan-btn-size-default {
     font-size: 14px;
     padding: 10px 18px;
 }
-.qan-btn-size-medium{
+
+.qan-btn-size-medium {
     font-size: 13px;
     padding: 9px 17px;
 }
 
-.qan-btn-size-small{
+.qan-btn-size-small {
     font-size: 12px;
     padding: 8px 16px;
 }
+
 /* 圆角 */
-.qan-btn-round{
+.qan-btn-round {
     border-radius: 20px;
 }
+
 /* 禁用 */
-.qan-btn-disabled{
+.qan-btn-disabled {
     position: relative;
+    cursor: not-allowed;
     pointer-events: none;
 }
-.qan-btn-disabled::before{
+
+.qan-btn-disabled::before {
     pointer-events: none;
     content: "";
     position: absolute;
@@ -237,12 +271,34 @@ body a:hover{
     right: -1px;
     bottom: -1px;
     border-radius: inherit;
-    background-color: hsla(0,0%,100%,.35);
+    background-color: hsla(0, 0%, 100%, .35);
 }
+
 /* ------------------加载------------------ */
-.icon-loading{
+.icon-loading {
     animation: rotating 2s linear infinite;
     line-height: 1;
     height: 100%;
     margin-right: 10px;
+}
+
+/* ------------------卡片------------------ */
+.qan-card {
+    border: 1px solid #ebeef5;
+    background-color: #fff;
+    padding: 20px;
+}
+
+.qan-card-shadow-always {
+    box-shadow:  5px 5px 10px #f2f2f2,
+    -5px -5px 10px #ffffff;
+}
+
+.qan-card-shadow-hover:hover {
+    box-shadow:  5px 5px 10px #f2f2f2,
+    -5px -5px 10px #ffffff;
+}
+
+.qan-card-round {
+    border-radius: 8px;
 }
