@@ -1,6 +1,6 @@
 <template>
   <div class="leftNav">
-    <QANmenu @select="onSelect" type="vertical" :defaultActive="$route.path">
+    <QANmenu width="200px" @select="onSelect" type="vertical" :defaultActive="$route.path">
       <div
         style="
           margin-bottom: 20px;

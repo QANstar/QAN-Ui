@@ -1,6 +1,6 @@
 <template>
-  <div :class="['qan-nav-' + type, 'qan-nav-theme-' + theme]">
-    <div class="qan-nav-content">
+  <div :style="{width:width}" :class="['qan-nav-' + type, 'qan-nav-theme-' + theme]">
+    <div  class="qan-nav-content">
       <ul class="qan-nav-list">
         <slot></slot>
       </ul>
@@ -24,6 +24,10 @@ export default {
       type: String,
       default: "default",
     },
+    width: {
+      type: String,
+      default: null,
+    },
   },
   provide() {
     return {
@@ -35,20 +39,20 @@ export default {
       activeIndex: this.defaultActive,
     };
   },
-  methods:{
+  methods: {
     handleItemClick(item) {
-        const { index } = item;
-        const hasIndex = item.index !== null;
+      const { index } = item;
+      const hasIndex = item.index !== null;
 
-        if (hasIndex) {
-          this.activeIndex = item.index;
-        }
+      if (hasIndex) {
+        this.activeIndex = item.index;
+      }
 
-        this.$emit('select', index, item);
-      },
+      this.$emit("select", index, item);
+    },
   },
-  mounted(){
-    this.$on('item-click', this.handleItemClick);
-  }
+  mounted() {
+    this.$on("item-click", this.handleItemClick);
+  },
 };
 </script>

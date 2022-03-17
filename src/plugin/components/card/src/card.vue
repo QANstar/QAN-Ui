@@ -58,7 +58,7 @@ export default {
     },
     width: {
       type: String,
-      default: "200px",
+      default: "auto",
     },
   },
 };

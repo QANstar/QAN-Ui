@@ -91,7 +91,7 @@ body a:hover {
 /* 左侧 */
 
 .qan-nav-vertical {
-    width: 150px;
+    width: 100%;
     z-index: 100;
 }
 
@@ -306,7 +306,7 @@ body a:hover {
 
 .qan-card-hide-content{
     
-    background-color: #f0f2f3;
+    background-color: #f5f5f5;
     border-top: 1px solid #eaeefb;
     overflow: hidden;
 }
