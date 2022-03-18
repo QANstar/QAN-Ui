@@ -1,6 +1,6 @@
 <template>
   <div class="show-content">
-    <h3>Button按钮</h3>
+    <h3>Button 按钮</h3>
     <div class="intr-font">基础的操作组件，通过QANbutton标签来使用</div>
     <h4>按钮类型</h4>
     <div class="intr-font">使用type属性来指定类型</div>

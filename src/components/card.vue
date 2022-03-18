@@ -1,5 +1,16 @@
 <template>
-  <div>
+  <div class="show-content">
+   
+    <QANcard class="show-card" width="80%" round hide shadow="hover">
+      <div class="button-content">
+        <QANbutton>默认按钮</QANbutton>
+        <QANbutton type="blue">蓝色按钮</QANbutton>
+        <QANbutton type="pink">粉色按钮</QANbutton>
+      </div>
+      <div slot="hide">
+        <div class="code-show">{{ buttonType }}</div>
+      </div>
+    </QANcard>
     <div class="item">
       <QANcard>卡片</QANcard>
     </div>
@@ -41,7 +52,5 @@
 </template>
 
 <style scoped>
-.item {
-  padding: 20px;
-}
+
 </style>
