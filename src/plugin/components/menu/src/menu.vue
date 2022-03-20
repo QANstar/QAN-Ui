@@ -1,6 +1,9 @@
 <template>
-  <div :style="{width:width}" :class="['qan-nav-' + type, 'qan-nav-theme-' + theme]">
-    <div  class="qan-nav-content">
+  <div
+    :style="{ width: width }"
+    :class="['qan-nav-' + type, 'qan-nav-theme-' + theme]"
+  >
+    <div class="qan-nav-content">
       <ul class="qan-nav-list">
         <slot></slot>
       </ul>
