@@ -1,40 +1,45 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import ComponentView from '../views/ComponentView.vue'
-import Button from '../components/button.vue'
-import Nav from '../components/nav.vue'
-import Card from '../components/card.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import ComponentView from "../views/ComponentView.vue";
+import Button from "../components/button.vue";
+import Nav from "../components/nav.vue";
+import Card from "../components/card.vue";
+import Modal from "../components/modal.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    redirect: '/component/button'
+    path: "/",
+    redirect: "/component/button",
   },
   {
-    path: '/component',
+    path: "/component",
     component: ComponentView,
-    redirect: '/component/button',
+    redirect: "/component/button",
     children: [
       {
-        path: '/component/button',
+        path: "/component/button",
         component: Button,
       },
       {
-        path: '/component/nav',
+        path: "/component/nav",
         component: Nav,
       },
       {
-        path: '/component/card',
+        path: "/component/card",
         component: Card,
-      }
-    ]
-  }
-]
+      },
+      {
+        path: "/component/modal",
+        component: Modal,
+      },
+    ],
+  },
+];
 
 const router = new VueRouter({
-  routes
-})
+  routes,
+});
 
-export default router
+export default router;
