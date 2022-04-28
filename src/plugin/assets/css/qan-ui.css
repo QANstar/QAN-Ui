@@ -331,7 +331,8 @@ body a:hover {
 .qan-modal-content {
   position: relative;
   top: 80px;
-  width: 300px;
+  min-width: 100px;
+  width: 400px;
   margin: auto;
   border-radius: 8px;
   padding: 10px;
