@@ -5,6 +5,7 @@ import Button from "../components/button.vue";
 import Nav from "../components/nav.vue";
 import Card from "../components/card.vue";
 import Modal from "../components/modal.vue";
+import Color from "../components/color.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,10 @@ const routes = [
       {
         path: "/component/modal",
         component: Modal,
+      },
+      {
+        path: "/component/color",
+        component: Color,
       },
     ],
   },

@@ -1,6 +1,11 @@
 <template>
   <div class="leftNav">
-    <QANmenu width="200px" @select="onSelect" type="vertical" :defaultActive="$route.path">
+    <QANmenu
+      width="200px"
+      @select="onSelect"
+      type="vertical"
+      :defaultActive="$route.path"
+    >
       <div
         style="
           margin-bottom: 20px;
@@ -12,6 +17,7 @@
       >
         QANui
       </div>
+      <QANmenuItem index="/component/color">颜色</QANmenuItem>
       <QANmenuItem index="/component/button">按钮</QANmenuItem>
       <QANmenuItem index="/component/nav">导航</QANmenuItem>
       <QANmenuItem index="/component/card">卡片</QANmenuItem>
@@ -21,17 +27,17 @@
 </template>
 <script>
 export default {
-  methods:{
-    onSelect(index){
+  methods: {
+    onSelect(index) {
       this.$router.push(index);
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <style scoped>
-.leftNav{
-    position: fixed;
-    top: 0;
-    bottom: 0;
+.leftNav {
+  position: fixed;
+  top: 0;
+  bottom: 0;
 }
 </style>
